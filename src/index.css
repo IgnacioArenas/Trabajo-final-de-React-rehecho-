@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  background: black;
+  width: 2px; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(red, red);
+  border-radius: 5px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(darkred, darkred);
+  border-radius: 5px; }
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)),
+  url(./assets/campeones/old-aatrox.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient( rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50));
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  padding: 1rem;
+}
+
+header ul li a{
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: crimson;
+}
+
+header .cart {
+  display: flex;
+}
+
+header .cart span {
+  cursor: pointer;
+  width: 1.3rem;
+  margin-top: -1rem;
+  margin-left: -0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: darkred;
+}
+
+header .cart span:hover {
+  background-color: crimson;
+}
+
+/* TITLE */
+
+.title {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient( rgba(5, 7, 12, 0), rgba(139, 0, 0, 0.5), rgba(5, 7, 12, 0));
+}
+
+/* PRODUCTOS */
+
+.productos {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.producto {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5));
+  border: 1px solid black;
+}
+
+.producto:hover {
+  background: linear-gradient(rgba(139, 0, 0, 0.5), rgba(139, 0, 0, 0.5));
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.producto a{
+  text-decoration: none;
+}
+
+.productoFooter {
+  padding: 1rem;
+}
+
+.productoFooter h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 1000;
+}
+
+.productoFooter p {
+    font-weight:400;
+}
+
+.price {
+  color: yellow;
+}
+
+.boton {
+  background-color: darkred;
+  color: white;
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  border: 1px solid darkslategrey;
+}
+
+.boton:hover {
+  background-color: red;
+}
