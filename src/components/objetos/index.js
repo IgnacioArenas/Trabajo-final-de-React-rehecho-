@@ -1,56 +1,24 @@
-import Hidra from "../../assets/objetos/Hidra.jpg";
-import Malla from "../../assets/objetos/Malla.jpg";
-import Martillo from "../../assets/objetos/Martillo.jpg";
+import React from "react";
+import { data } from "../../context/Data/dataObjetos";
 
 export const ObjetosLol = () => {
     return (
         <>
+        <h1 className="titulo"> OBJETOS </h1>
         <div className="productos">
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Hidra} />
+            {data.map(product => (
+                <div className="producto">
+                    <figure className="productoImg">
+                        <img src={product.img} alt={product.nameProduct} />
+                    </figure>
+                    <div className="productoFooter">
+                        <h2 className="nombreProducto"> {product.nameProduct} </h2>
+                        <p className="description"> {product.description}</p>
+                        <p className="price"> ${product.price} </p>
+                        <button className="boton"> Añadir al carrito </button>
                     </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Hidra </h1>
-                    <p> Objeto </p>
-                    <p className="price"> 10 RP </p>
                 </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Malla} />
-                    </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Malla </h1>
-                    <p> Objeto </p>
-                    <p className="price"> 10 RP </p>
-                </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Martillo} />
-                    </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Martillo </h1>
-                    <p> Objeto </p>
-                    <p className="price"> 6 RP </p>
-                </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
+            ))}
         </div>
         </>
     )

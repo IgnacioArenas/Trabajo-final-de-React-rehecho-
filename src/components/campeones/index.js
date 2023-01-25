@@ -1,57 +1,24 @@
 import React from "react";
-import Aatrox from "../../assets/campeones/Aatrox.jpg";
-import Garen from "../../assets/campeones/Garen.jpg";
-import Trundle from "../../assets/campeones/Trundle.jpg";
+import { data } from "../../context/Data/dataCampeones";
 
 export const CampeonesLol = () => {
     return (
         <>
+        <h1 className="titulo"> CAMPEONES </h1>
         <div className="productos">
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Aatrox} />
+            {data.map(product => (
+                <div className="producto">
+                    <figure className="productoImg">
+                        <img src={product.img} alt={product.nameProduct} />
+                    </figure>
+                    <div className="productoFooter">
+                        <h2 className="nombreProducto"> {product.nameProduct} </h2>
+                        <p className="description"> {product.description}</p>
+                        <p className="price"> ${product.price} </p>
+                        <button className="boton"> Añadir al carrito </button>
                     </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Aatrox </h1>
-                    <p> Campeón </p>
-                    <p className="price"> 100 RP </p>
                 </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Garen} />
-                    </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Garen </h1>
-                    <p> Campeón </p>
-                    <p className="price"> 20 RP </p>
-                </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
-            <div className="producto">
-                <a href="">
-                    <div className="productoImg">
-                        <img src={Trundle} />
-                    </div>
-                </a>
-                <div className="productoFooter">
-                    <h1> Trundle </h1>
-                    <p> Campeón </p>
-                    <p className="price"> 50 RP </p>
-                </div>
-                <div className="button">
-                    <button className="boton"> Añadir al carrito </button>
-                </div>
-            </div>
+            ))}
         </div>
         </>
     )
